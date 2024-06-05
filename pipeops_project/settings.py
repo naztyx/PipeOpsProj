@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'projApp'
 ]
 
 MIDDLEWARE = [
@@ -128,4 +129,3 @@ if DEBUG:
     ]
 else:
     STATIC_ROOT = BASE_DIR / 'static'
-    
