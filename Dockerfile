@@ -16,7 +16,7 @@ COPY . .
 RUN python manage.py migrate
 
 # collect statics
-RUN pyhton manage.py collectstatic --noinput
+RUN python manage.py collectstatic --noinput
 
 # expose the django port 8000
 EXPOSE 8000
