@@ -2,13 +2,13 @@
 FROM python:3.11.0
 
 # set environment variables
-ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
 WORKDIR /app
 
-#COPY requirements.txt
-#RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
@@ -22,4 +22,4 @@ RUN pyhton manage.py collectstatic --noinput
 EXPOSE 8000
 
 # start the server
-CMD ['python', 'manage.py', 'runserver', '0.0.0.0:8000']
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
