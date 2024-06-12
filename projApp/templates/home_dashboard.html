@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Patient Dashboard</title>
+    </head>
+
+    <body>
+        <h1>Welcome, {{ user.first_name }}</h1>
+        <h2>Your Personal Health Records...</h2>
+        <ul>
+            {% for record in medical_records %}
+            <li>{{ record.record_date }}: {{ record.data }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Device data:</h2>
+        <ul>
+            {% for data in device_data %}
+            <li>{{ data.timestamp }} - {{ data.datatype }}: {{ data.value }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
