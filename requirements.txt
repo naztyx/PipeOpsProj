@@ -1,3 +1,4 @@
 django
 sqlparse
 python-dotenv
+whitenoise
