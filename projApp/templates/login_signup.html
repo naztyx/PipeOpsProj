@@ -61,15 +61,16 @@
         <div class="overlay-container" id="overlayCon">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Already have an account? <a href="#" class="authen">Sign in</a></p>
-                    <br>
+                    <p>Already have an account?</p>
                     <button>Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Hi...</h1>
-                    <p>Care to start your journey with us? <button class="authen">Sign up</button></p>
-
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Care to start your journey with us?</p>
+                    
                     <button id="signUpBtn">Sign Up</button>                
                 </div>
             </div>
@@ -80,7 +81,7 @@
     <script>
       const container = document.getElementById('container');
       const overlayCon = document.getElementById('overlayCon');
-      const overlayBtn = document.getElementsByClassName('authen');
+      const overlayBtn = document.getElementById('overlayBtn');
 
       overlayBtn.addEventListener('click', () => {
         container.classList.toggle('right-panel-active');
